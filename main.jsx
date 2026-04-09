@@ -1,4 +1,7 @@
 import { useState, useEffect } from "react";
+import ReactDOM from "react-dom/client";
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
 
 const STORAGE_KEY = "ffi-assessments-v2";
 
@@ -443,7 +446,7 @@ function Dashboard({ onBack }) {
   );
 }
 
-export default function App() {
+function App() {
   const [page, setPage] = useState("landing");
   const [assessType, setAssessType] = useState(null);
   const [completedEntry, setCompletedEntry] = useState(null);
